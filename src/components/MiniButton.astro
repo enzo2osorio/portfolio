@@ -1,0 +1,27 @@
+---
+const { technologyName, section } = Astro.props;
+
+let sectionClass = "";
+
+if (section === "framework") {
+  sectionClass = "bg-slate-800";
+} else if (section === "design") {
+  sectionClass = "bg-blue-700";
+} else if (section === "database") {
+  sectionClass = "bg-teal-600";
+}
+---
+
+<p class=`py-1 px-3 rounded-lg ${sectionClass}`>
+  {technologyName}
+</p>
+<p class="bg"></p>
+<!-- {section === 'database' ? (
+      <p class={`rounded-xl ${sectionClass}`}>
+        {technologyName}
+      </p>
+    ) : (
+      <p class={sectionClass}>
+        {technologyName}
+      </p>
+    )} -->

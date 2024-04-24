@@ -1,0 +1,67 @@
+---
+import CardProyect from "./CardProyect.astro";
+import fotoProyecto1 from "../images/foto-proyecto1.jpg";
+import fotoProyecto2 from "../images/foto-proyecto2.jpg";
+
+const proyectos = [
+  {
+    id: 1,
+    nombre: "Sumac Arts",
+    descripcion: `Yo soy bad boy mami como Ben Wallace
+Ando con Dios pero el diablo me jala
+Con este piquete que no se iguala
+Moñas que patean como fútbol de sala
+Tengo a tu wifey trepada en mi palo
+Sí, como koala y no se resbala
+No me ven volando, me cortan las alas
+Lo hice a pulmón, sin favores ni palas, yeah`,
+    img: fotoProyecto1,
+    tecnologias: [
+      { technologyName: "nextjs", section: "framework" },
+      { technologyName: "tailwindCSS", section: "design" },
+      { technologyName: "mongoDB", section: "database" },
+    ],
+  },
+  {
+    id: 2,
+    nombre: "Yin Dye Art",
+    descripcion: `Yo soy bad boy mami como Ben Wallace
+Ando con Dios pero el diablo me jala
+Con este piquete que no se iguala
+Moñas que patean como fútbol de sala
+Tengo a tu wifey trepada en mi palo
+Sí, como koala y no se resbala
+No me ven volando, me cortan las alas
+Lo hice a pulmón, sin favores ni palas, yeah`,
+    img: fotoProyecto2,
+    tecnologias: [
+      { technologyName: "nextjs", section: "framework" },
+      { technologyName: "tailwindCSS", section: "design" },
+      { technologyName: "mongoDB", section: "database" },
+    ],
+  },
+];
+---
+
+<section
+  id="projects"
+  class="text-pretty lg:w-7/12 w-[27rem] mx-auto my-8 flex flex-col items-start justify-around gap-14 bg-emerald-500/20 rounded-xl px-4 py-6 lg:px-8"
+>
+  <h1 class="text-3xl font-bold">Proyectos</h1>
+  <div
+    class="flex flex-col-reverse gap-14 lg:grid lg:grid-cols-2 justify-center mx-auto"
+  >
+    {
+      proyectos &&
+        proyectos.map((project) => (
+          <CardProyect
+            id={project.id}
+            nombre={project.nombre}
+            descripcion={project.descripcion}
+            img={project.img}
+            technologies={project.tecnologias}
+          />
+        ))
+    }
+  </div>
+</section>

@@ -1,0 +1,50 @@
+---
+import Button from "./Button.astro";
+---
+
+<section
+  id="contact"
+  class="text-pretty lg:w-7/12 w-[27rem] mx-auto my-8 flex flex-col items-start justify-around gap-4 bg-emerald-500/20 rounded-xl px-4 py-6 lg:px-8"
+>
+  <h1 class="text-3xl font-bold">Contacto</h1>
+  <h4>Rellena el siguiente formulario...</h4>
+  <form
+    class="flex flex-col gap-5 items-start mx-auto w-full lg:w-[27rem] border p-4 shadow-xl rounded-sm"
+  >
+    <div class="flex flex-col gap-5 w-full">
+      <label class="font-bold"> Correo: </label>
+      <input
+        type="email"
+        minlength="1"
+        class="p-1 h-8 rounded-sm bg-emerald-900/50 outline-none shadow-xl"
+        required
+        name="emailUser"
+      />
+    </div>
+    <div class="flex flex-col gap-5 w-full">
+      <label class="font-bold"> Asunto: </label>
+      <select
+        name="userAffair"
+        required
+        class="p-1 h-8 rounded-sm bg-emerald-900/50 shadow-xl"
+      >
+        <option value="value2" selected
+          >Hola, vi tu maravilloso cv y quisiera ofrecerte un trabajo</option
+        >
+        <option value="value1">Hola, quisiera preguntarte algo</option>
+        <option value="value3">Sin asunto en especial</option>
+      </select>
+    </div>
+    <div class="flex flex-col gap-5 w-full">
+      <label class="font-bold"> Mensaje: </label>
+      <textarea
+        minlength="1"
+        class="p-1 h-8 min-h-8 rounded-sm bg-emerald-900/50 outline-none shadow-xl"
+        required
+        name="messageUser"></textarea>
+    </div>
+    <div class="mx-auto mt-4">
+      <Button content="Enviar" />
+    </div>
+  </form>
+</section>

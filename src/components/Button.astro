@@ -1,0 +1,7 @@
+---
+const { content, classes, icon, altIcon } = Astro.props;
+---
+<button class="border border-emerald-500/10 text-sm rounded-lg px-2 py-2 inline-flex gap-4 bg-emerald-500/10 shadow-lg items-center text-white hover:scale-105 hover:font-bold transition-all">
+    {icon && <img src={icon} alt={altIcon}/>}
+    {content}
+</button>

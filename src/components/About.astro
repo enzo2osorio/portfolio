@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import meWithMyCat from "../images/me-with-my-cat.jpeg";
+---
+
+<!-- falta una imagen de mi -->
+<section
+  id="about"
+  class="text-pretty lg:w-7/12 w-[27rem] mx-auto my-8 flex flex-col items-start justify-around gap-4 bg-emerald-500/20 rounded-xl px-4 py-6 lg:px-8"
+>
+  <h1 class="text-3xl font-bold">Sobre mí</h1>
+  <div
+    class="flex flex-col lg:flex-row-reverse items-start lg:items-center justify-around gap-8 lg:gap-14 leading-8 text-lg"
+  >
+    <Image
+      src={meWithMyCat}
+      alt="me with my cat"
+      class="w-48 lg:w-56 rounded-xl outline p-[2px] mx-auto rotate-3 my-6 shadow-xl"
+    />
+    <div class="text-about-wrapper">
+      <p class="leading-relaxed">
+        Soy un joven que busca comerse el mundo. Desde pequeño si bien no tenía
+        claramente definido mi futuro, sabía que necesitaba hacer algo que vaya
+        a ser útil para miles de personas, y en un punto poder generar un cambio
+        en para éstas.
+      </p>
+      <p class="mt-6 leading-relaxed">
+        El deporte es otro punto muy resaltante de mi vida, pues debo mucho de
+        mis desiciones y actitudes a los deportes. He tenido muchas
+        participaciones en competiciones que me han hecho darme cuenta que se
+        necesitan retos para que la vida siga cobrando sentido. Estoy decidido a
+        afrontar esos retos.
+      </p>
+    </div>
+  </div>
+</section>

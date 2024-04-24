@@ -1,0 +1,57 @@
+---
+import { Image } from "astro:assets";
+import IdeaIcon from "../images/idea-svgrepo-com.svg";
+import TeamworkIcon from "../images/team-svgrepo-com.svg";
+import Communication from "../images/businessmen-business-communication-techniques-svgrepo-com.svg";
+import GitHub from "../images/github-svgrepo-com.svg";
+import NextJs from "../images/nextjs-icon-svgrepo-com.svg";
+import UxUi from "../images/ux-design-svgrepo-com.svg";
+import HTML from "../images/html-icon.svg";
+---
+
+<section
+  id="qualities"
+  class="lg:w-7/12 w-[27rem] mx-auto my-8 flex flex-col items-start justify-around gap-4 bg-emerald-500/20 rounded-xl px-4 py-6 lg:px-8"
+>
+  <h1 class="text-3xl font-bold">Mis cualidades</h1>
+  <div class="flex gap-4">
+    <div class="flex flex-col items-start justify-center gap-8 bg-red-700">
+      <div class="">
+        <h3 class="text-2xl text-yellow-300">Habilidades blandas a destacar</h3>
+        <ul class="flex flex-col gap-3 py-3">
+          <li>Trabajo en equipo</li>
+          <li>Comunicación efectiva</li>
+          <li>Adaptabilidad</li>
+          <li>Pensamiento crítico</li>
+          <li>Empatia</li>
+        </ul>
+        <div class="flex lg:hidden justify-around items-center pl-3 mt-5">
+          <Image src={IdeaIcon} alt="idea icon" />
+          <Image src={TeamworkIcon} alt="teamwork icon" />
+          <Image src={Communication} alt="communication icon" />
+        </div>
+      </div>
+      <div class="">
+        <h3 class="text-2xl text-yellow-300">Habilidades duras a destacar</h3>
+        <ul class="flex flex-col gap-3 py-3">
+          <li>Programación frontend</li>
+          <li>Diseño UX/UI</li>
+          <li>Control de versiones de git y github</li>
+          <li>Metodologias agiles</li>
+          <li>Aprendizaje intensivo</li>
+        </ul>
+        <div
+          class="flex lg:hidden justify-around items-center pl-10 gap-4 mt-5"
+        >
+          <Image src={NextJs} alt="Scrum icon" />
+          <Image src={GitHub} alt="GitHub icon" />
+          <Image src={UxUi} alt="UxUi icon" />
+        </div>
+      </div>
+    </div>
+    <div class="bg-blue-500 lg:grid lg:grid-flow-col lg:grid-cols-3">
+      <Image src={HTML} alt="Html Icon" class="w-16" />
+      <p>adipawndwindaiopn</p>
+    </div>
+  </div>
+</section>
