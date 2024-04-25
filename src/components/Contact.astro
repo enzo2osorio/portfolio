@@ -39,7 +39,7 @@ import Button from "./Button.astro";
       <label class="font-bold"> Mensaje: </label>
       <textarea
         minlength="1"
-        class="p-1 h-8 min-h-8 rounded-sm bg-emerald-900/50 outline-none shadow-xl"
+        class="p-1 h-8 min-h-8 rounded-sm bg-emerald-900/50 outline-none shadow-xl resize-y sizing"
         required
         name="messageUser"></textarea>
     </div>
@@ -48,3 +48,10 @@ import Button from "./Button.astro";
     </div>
   </form>
 </section>
+
+<style>
+  .sizing {
+    form-sizing: content;
+    field-sizing: content;
+  }
+</style>

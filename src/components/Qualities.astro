@@ -1,19 +1,52 @@
 ---
 import { Image } from "astro:assets";
-import IdeaIcon from "../images/idea-svgrepo-com.svg";
-import TeamworkIcon from "../images/team-svgrepo-com.svg";
-import Communication from "../images/businessmen-business-communication-techniques-svgrepo-com.svg";
-import GitHub from "../images/github-svgrepo-com.svg";
-import NextJs from "../images/nextjs-icon-svgrepo-com.svg";
-import UxUi from "../images/ux-design-svgrepo-com.svg";
-import HTML from "../images/html-icon.svg";
+
+import Next from "../images/next.svg";
+import Previous from "../images/previous-svgrepo-com.svg";
+import TeamWork from "../images/trabajoenequipo-removebg.png";
 ---
 
 <section
   id="qualities"
-  class="lg:w-7/12 w-[27rem] mx-auto my-8 flex flex-col items-start justify-around gap-4 bg-emerald-500/20 rounded-xl px-4 py-6 lg:px-8"
+  class="lg:w-7/12 w-[27rem] mx-auto my-8 grid grid-cols-4 grid-rows-2 lg:grid-cols-3 lg:grid-rows-2 gap-3 bg-transparent rounded-xl px-4 py-6 lg:px-8"
 >
-  <h1 class="text-3xl font-bold">Mis cualidades</h1>
+  <div
+    class="col-span-4 row-span-1 lg:row-span-2 lg:col-span-1 bg-orange-500/20 px-3 py-6 lg:px-8 rounded-xl shadow-xl flex items-center justify-center"
+  >
+    <div>
+      <h3 class="text-lg text-center">Nivel de inglés</h3>
+      <h4 class="text-xl text-center text-yellow-300 font-bold">
+        Intermedio 3
+      </h4>
+    </div>
+  </div>
+  <div
+    class="col-span-2 lg:col-span-2 bg-blue-500/40 px-3 py-6 lg:px-8 rounded-xl shadow-xl flex flex-col items-center justify-center"
+  >
+    <p>Habilidades blandas</p>
+    <div class="flex items-center justify-center gap-10 h-40">
+      <button class="text-white">
+        <Image
+          src={Previous}
+          alt="prev button"
+          class="fill-neutral-50 text-white"
+        />
+      </button>
+      <div class="flex flex-col items-center justify-center gap-12 mt-4">
+        <p class="text-yellow-300 text-xl font-bold">Trabajo en equipo</p>
+        <Image src={TeamWork} alt="teamwork" class="w-24" />
+      </div>
+      <button>
+        <Image src={Next} alt="next button" />
+      </button>
+    </div>
+  </div>
+  <div
+    class="col-span-2 lg:col-span-2 bg-yellow-500/50 px-3 py-6 lg:px-8 rounded-xl shadow-xl"
+  >
+    <p>habilidades duras</p>
+  </div>
+  <!-- <h1 class="text-3xl font-bold">Mis cualidades</h1>
   <div class="flex gap-4">
     <div class="flex flex-col items-start justify-center gap-8 bg-red-700">
       <div class="">
@@ -53,5 +86,5 @@ import HTML from "../images/html-icon.svg";
       <Image src={HTML} alt="Html Icon" class="w-16" />
       <p>adipawndwindaiopn</p>
     </div>
-  </div>
+  </div> -->
 </section>
